@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "long_description": {
+      "type": "blocks"
+    },
+    "hero_picture_video": {
+      "type": "string"
+    },
+    "galley": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "technologies_used": {
+      "type": "enumeration",
+      "enum": [
+        "AR",
+        "VR",
+        "UE"
+      ]
+    },
+    "development_duration": {
+      "type": "integer"
+    },
+    "service_type": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "Sci-Fi",
+        "Third-Person Shooter",
+        "Adventure"
+      ]
+    },
+    "hero_picture": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
