@@ -557,9 +557,22 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    genre: Schema.Attribute.Enumeration<
-      ['Sci-Fi', 'Third-Person Shooter', 'Adventure']
-    >;
+    genre: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        [
+          'Adventure',
+          'Platformer',
+          'Shooter',
+          'Fighting',
+          "Beat 'em up",
+          'Stealth',
+          'Survival',
+          'Survival Horror',
+          'Rhythm',
+        ]
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
     hero_picture: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -570,11 +583,16 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'api::project.project'
     > &
       Schema.Attribute.Private;
-    long_description: Schema.Attribute.Blocks;
+    long_description: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
     service_type: Schema.Attribute.String;
     short_description: Schema.Attribute.String;
-    technologies_used: Schema.Attribute.Enumeration<['AR', 'VR', 'UE']>;
+    technologies: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['AR', 'VR', 'UE']
+      > &
+      Schema.Attribute.DefaultTo<'[]'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

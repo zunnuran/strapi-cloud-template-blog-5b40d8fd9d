@@ -18,10 +18,26 @@
       "type": "string"
     },
     "long_description": {
-      "type": "blocks"
+      "type": "richtext"
     },
     "hero_picture_video": {
       "type": "string"
+    },
+    "development_duration": {
+      "type": "integer"
+    },
+    "service_type": {
+      "type": "string"
+    },
+    "hero_picture": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "galley": {
       "type": "media",
@@ -33,36 +49,30 @@
         "audios"
       ]
     },
-    "technologies_used": {
-      "type": "enumeration",
-      "enum": [
+    "technologies": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
         "AR",
         "VR",
         "UE"
       ]
     },
-    "development_duration": {
-      "type": "integer"
-    },
-    "service_type": {
-      "type": "string"
-    },
     "genre": {
-      "type": "enumeration",
-      "enum": [
-        "Sci-Fi",
-        "Third-Person Shooter",
-        "Adventure"
-      ]
-    },
-    "hero_picture": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
+        "Adventure",
+        "Platformer",
+        "Shooter",
+        "Fighting",
+        "Beat 'em up",
+        "Stealth",
+        "Survival",
+        "Survival Horror",
+        "Rhythm"
       ]
     }
   }
