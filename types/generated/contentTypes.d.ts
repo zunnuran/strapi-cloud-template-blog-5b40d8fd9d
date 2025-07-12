@@ -597,6 +597,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url_app_store: Schema.Attribute.String;
+    url_play_store: Schema.Attribute.String;
   };
 }
 

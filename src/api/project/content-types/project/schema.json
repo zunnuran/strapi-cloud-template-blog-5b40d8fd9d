@@ -74,6 +74,12 @@
         "Survival Horror",
         "Rhythm"
       ]
+    },
+    "url_play_store": {
+      "type": "string"
+    },
+    "url_app_store": {
+      "type": "string"
     }
   }
 }
