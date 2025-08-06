@@ -590,6 +590,14 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       true
     >;
     publishedAt: Schema.Attribute.DateTime;
+    ratings: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 1;
+        },
+        number
+      >;
     service_type: Schema.Attribute.String;
     short_description: Schema.Attribute.String;
     slider_gallery: Schema.Attribute.Media<

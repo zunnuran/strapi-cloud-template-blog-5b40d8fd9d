@@ -110,6 +110,11 @@
         "videos",
         "audios"
       ]
+    },
+    "ratings": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
     }
   }
 }
