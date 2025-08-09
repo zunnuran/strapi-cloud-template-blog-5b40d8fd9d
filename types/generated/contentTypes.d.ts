@@ -599,6 +599,9 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         number
       >;
     service_type: Schema.Attribute.String;
+    shallow_background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     short_description: Schema.Attribute.String;
     slider_gallery: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
