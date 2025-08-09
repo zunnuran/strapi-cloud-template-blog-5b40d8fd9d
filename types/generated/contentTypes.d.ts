@@ -619,6 +619,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     url_app_store: Schema.Attribute.String;
     url_play_store: Schema.Attribute.String;
+    url_steam: Schema.Attribute.String;
   };
 }
 
